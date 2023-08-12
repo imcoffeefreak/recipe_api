@@ -8,10 +8,12 @@ app.use(express.json());
 
 const userRoute = require("./controllers/users.controller");
 const authRoute = require("./controllers/auth.controller");
+const recipeRoute = require("./controllers/recipe.controller");
 
 
 app.use("/api/users", userRoute);
 app.use("/api/auth", authRoute);
+app.use("/api/recipe", recipeRoute);
 
 
 app.listen(8000, ()=>{
